@@ -36,8 +36,7 @@ public class Program
         System.out.println("    "+chromeDriver.getTitle());
 
         // 4)
-        //By locatorSearchResult = By.xpath("//ol[@aria-label='Результаты поиска']" +
-         //       "/li[@class='b_algo']");
+
 
         By locatorSearchResult = By.xpath("//div[@class='b_title']/h2/a");
         List<WebElement> listSearchResults = chromeDriver.findElements(locatorSearchResult);
