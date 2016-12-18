@@ -103,5 +103,10 @@ public  class PageObject
         return driver.findElement(locatorMainImage);
     }
 
+    public By locatorImageListElement(int index)
+    {
+        return By.xpath("//div[@id='recContainer']/div/ul/li[@data-idx='" +(index+35)+ "']");
+    }
+
 
 }

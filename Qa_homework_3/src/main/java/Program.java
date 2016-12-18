@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
 
 /**
@@ -53,26 +55,27 @@ public class Program
         //---------------------------  3  -----------------------------------//
 
         //array with loading images
-        List<WebElement> imageList = pObj.imageList();
+        List<WebElement> prevScrollList = pObj.imageList();
 
         //scroll down page 4 times
-        int i = 0;
-        while(i<4)
-       {
-           //page scroll
-           jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        for(int i = 0 ; i <4; i++)
+        {
 
-           //wait page
-           Waits.waitLoadPage(chromeDriver);
+            int prevScrollSize = prevScrollList.size() ;
+            jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+            explicitWait.until(visibilityOf(prevScrollList.get(prevScrollSize-1)));
 
-           //check that new images was loaded
-           List<WebElement> buferList = pObj.imageList();
-           if(buferList.size()> imageList.size())
-           {
-               imageList = buferList;
-               i++;
-           }
-       }
+            //wait for the last element who was downloaded after scroll
+            explicitWait.until(presenceOfElementLocated(pObj.locatorImageListElement(prevScrollSize)));
+
+            List<WebElement> afterScrollList = pObj.imageList();
+            int afterScrollSize =  afterScrollList.size();
+            if(afterScrollSize > prevScrollSize)
+            {
+                System.out.println("New images was downloaded");
+            }
+
+        }
 
        //----------------------------  4  ------------------------------//
 
