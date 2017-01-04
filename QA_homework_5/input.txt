@@ -1,3 +1,0 @@
-mave maven
-testn testng
-automatio automation
