@@ -1,0 +1,255 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 41.506 sec <<< FAILURE! - in TestSuite
+goToPageAndCheckIt(com.ohrimenko1988.QA_homework_4.Main)  Time elapsed: 31.701 sec  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='hp_sw_logo hpcLogoWhite']' (tried for 15 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'Igor-PK', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.support.events.EventFiringWebDriver
+	at com.ohrimenko1988.QA_homework_4.Main.goToPageAndCheckIt(Main.java:69)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Element was not found.
+Command duration or timeout: 15.30 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'Igor-PK', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{aut=android, browserName=android, platform=ANDROID}]
+Session ID: 7001c247-57aa-8015-5608-f4808d458817
+*** Element info: {Using=xpath, value=//div[@class='hp_sw_logo hpcLogoWhite']}
+	at com.ohrimenko1988.QA_homework_4.Main.goToPageAndCheckIt(Main.java:69)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Element was not found.
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'Igor-PK', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_102'
+Driver info: driver.version: unknown
+
+searchCheckAndSave(com.ohrimenko1988.QA_homework_4.Main)  Time elapsed: 2.803 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+CATCH_ALL: java.lang.NullPointerException
+	at io.selendroid.server.model.SelendroidWebDriver.executeJavascriptInWebView(SelendroidWebDriver.java:228)
+	at io.selendroid.server.model.SelendroidWebDriver.executeAtom(SelendroidWebDriver.java:194)
+	at io.selendroid.server.model.SelendroidWebDriver.executeAtom(SelendroidWebDriver.java:181)
+	at io.selendroid.server.model.DefaultSelendroidDriver$WebviewSearchScope.lookupElement(DefaultSelendroidDriver.java:409)
+	at io.selendroid.server.model.internal.AbstractWebElementContext.findElementByXPath(AbstractWebElementContext.java:204)
+	at io.selendroid.server.model.internal.AbstractWebElementContext.findElement(AbstractWebElementContext.java:147)
+	at io.selendroid.server.model.By$ByXPath.findElement(By.java:231)
+	at io.selendroid.server.model.DefaultSelendroidDriver.findElement(DefaultSelendroidDriver.java:102)
+	at io.selendroid.server.handler.FindElement.safeHandle(FindElement.java:42)
+	at io.selendroid.server.handler.SafeRequestHandler.handle(SafeRequestHandler.java:86)
+	at io.selendroid.server.AndroidServlet.handleRequest(AndroidServlet.java:264)
+	at io.selendroid.server.common.BaseServlet.handleHttpRequest(BaseServlet.java:67)
+	at io.selendroid.server.common.http.ServerHandler.channelRead(ServerHandler.java:53)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.traffic.AbstractTrafficShapingHandler.channelRead(AbstractTrafficShapingHandler.java:223)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:163)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:148)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:125)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:430)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:384)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137)
+	at java.lang.Thread.run(Thread.java:838)
+
+Command duration or timeout: 2.30 seconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'Igor-PK', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{aut=android, browserName=android, platform=ANDROID}]
+Session ID: 7001c247-57aa-8015-5608-f4808d458817
+*** Element info: {Using=xpath, value=//div[@class='hp_sw_logo hpcLogoWhite']}
+	at com.ohrimenko1988.QA_homework_4.Main.searchCheckAndSave(Main.java:122)
+Caused by: java.lang.NullPointerException: 
+CATCH_ALL: java.lang.NullPointerException
+	at io.selendroid.server.model.SelendroidWebDriver.executeJavascriptInWebView(SelendroidWebDriver.java:228)
+	at io.selendroid.server.model.SelendroidWebDriver.executeAtom(SelendroidWebDriver.java:194)
+	at io.selendroid.server.model.SelendroidWebDriver.executeAtom(SelendroidWebDriver.java:181)
+	at io.selendroid.server.model.DefaultSelendroidDriver$WebviewSearchScope.lookupElement(DefaultSelendroidDriver.java:409)
+	at io.selendroid.server.model.internal.AbstractWebElementContext.findElementByXPath(AbstractWebElementContext.java:204)
+	at io.selendroid.server.model.internal.AbstractWebElementContext.findElement(AbstractWebElementContext.java:147)
+	at io.selendroid.server.model.By$ByXPath.findElement(By.java:231)
+	at io.selendroid.server.model.DefaultSelendroidDriver.findElement(DefaultSelendroidDriver.java:102)
+	at io.selendroid.server.handler.FindElement.safeHandle(FindElement.java:42)
+	at io.selendroid.server.handler.SafeRequestHandler.handle(SafeRequestHandler.java:86)
+	at io.selendroid.server.AndroidServlet.handleRequest(AndroidServlet.java:264)
+	at io.selendroid.server.common.BaseServlet.handleHttpRequest(BaseServlet.java:67)
+	at io.selendroid.server.common.http.ServerHandler.channelRead(ServerHandler.java:53)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.traffic.AbstractTrafficShapingHandler.channelRead(AbstractTrafficShapingHandler.java:223)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:163)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:148)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:125)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:430)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:384)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137)
+	at java.lang.Thread.run(Thread.java:838)
+
+
+searchCheckAndSave(com.ohrimenko1988.QA_homework_4.Main)  Time elapsed: 0.041 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+CATCH_ALL: java.lang.NullPointerException
+	at io.selendroid.server.model.SelendroidWebDriver.get(SelendroidWebDriver.java:290)
+	at io.selendroid.server.model.DefaultSelendroidDriver.get(DefaultSelendroidDriver.java:524)
+	at io.selendroid.server.handler.OpenUrl.safeHandle(OpenUrl.java:38)
+	at io.selendroid.server.handler.SafeRequestHandler.handle(SafeRequestHandler.java:86)
+	at io.selendroid.server.AndroidServlet.handleRequest(AndroidServlet.java:264)
+	at io.selendroid.server.common.BaseServlet.handleHttpRequest(BaseServlet.java:67)
+	at io.selendroid.server.common.http.ServerHandler.channelRead(ServerHandler.java:53)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.traffic.AbstractTrafficShapingHandler.channelRead(AbstractTrafficShapingHandler.java:223)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:163)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:148)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:125)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:430)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:384)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137)
+	at java.lang.Thread.run(Thread.java:838)
+
+Command duration or timeout: 36 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'Igor-PK', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{aut=android, browserName=android, platform=ANDROID}]
+Session ID: 7001c247-57aa-8015-5608-f4808d458817
+	at com.ohrimenko1988.QA_homework_4.Main.searchCheckAndSave(Main.java:120)
+Caused by: java.lang.NullPointerException: 
+CATCH_ALL: java.lang.NullPointerException
+	at io.selendroid.server.model.SelendroidWebDriver.get(SelendroidWebDriver.java:290)
+	at io.selendroid.server.model.DefaultSelendroidDriver.get(DefaultSelendroidDriver.java:524)
+	at io.selendroid.server.handler.OpenUrl.safeHandle(OpenUrl.java:38)
+	at io.selendroid.server.handler.SafeRequestHandler.handle(SafeRequestHandler.java:86)
+	at io.selendroid.server.AndroidServlet.handleRequest(AndroidServlet.java:264)
+	at io.selendroid.server.common.BaseServlet.handleHttpRequest(BaseServlet.java:67)
+	at io.selendroid.server.common.http.ServerHandler.channelRead(ServerHandler.java:53)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.traffic.AbstractTrafficShapingHandler.channelRead(AbstractTrafficShapingHandler.java:223)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:163)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:148)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:125)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:430)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:384)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137)
+	at java.lang.Thread.run(Thread.java:838)
+
+
+searchCheckAndSave(com.ohrimenko1988.QA_homework_4.Main)  Time elapsed: 0.043 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+CATCH_ALL: java.lang.NullPointerException
+	at io.selendroid.server.model.SelendroidWebDriver.get(SelendroidWebDriver.java:290)
+	at io.selendroid.server.model.DefaultSelendroidDriver.get(DefaultSelendroidDriver.java:524)
+	at io.selendroid.server.handler.OpenUrl.safeHandle(OpenUrl.java:38)
+	at io.selendroid.server.handler.SafeRequestHandler.handle(SafeRequestHandler.java:86)
+	at io.selendroid.server.AndroidServlet.handleRequest(AndroidServlet.java:264)
+	at io.selendroid.server.common.BaseServlet.handleHttpRequest(BaseServlet.java:67)
+	at io.selendroid.server.common.http.ServerHandler.channelRead(ServerHandler.java:53)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.traffic.AbstractTrafficShapingHandler.channelRead(AbstractTrafficShapingHandler.java:223)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:163)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:148)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:125)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:430)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:384)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137)
+	at java.lang.Thread.run(Thread.java:838)
+
+Command duration or timeout: 40 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'Igor-PK', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{aut=android, browserName=android, platform=ANDROID}]
+Session ID: 7001c247-57aa-8015-5608-f4808d458817
+	at com.ohrimenko1988.QA_homework_4.Main.searchCheckAndSave(Main.java:120)
+Caused by: java.lang.NullPointerException: 
+CATCH_ALL: java.lang.NullPointerException
+	at io.selendroid.server.model.SelendroidWebDriver.get(SelendroidWebDriver.java:290)
+	at io.selendroid.server.model.DefaultSelendroidDriver.get(DefaultSelendroidDriver.java:524)
+	at io.selendroid.server.handler.OpenUrl.safeHandle(OpenUrl.java:38)
+	at io.selendroid.server.handler.SafeRequestHandler.handle(SafeRequestHandler.java:86)
+	at io.selendroid.server.AndroidServlet.handleRequest(AndroidServlet.java:264)
+	at io.selendroid.server.common.BaseServlet.handleHttpRequest(BaseServlet.java:67)
+	at io.selendroid.server.common.http.ServerHandler.channelRead(ServerHandler.java:53)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.traffic.AbstractTrafficShapingHandler.channelRead(AbstractTrafficShapingHandler.java:223)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:163)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:148)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:125)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:430)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:384)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137)
+	at java.lang.Thread.run(Thread.java:838)
+
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite1]">
+  <parameter name="driverName" value="android"/>
+  <parameter name="platformName" value="ANDROID"/>
+  <test name="Test(failed)">
+    <parameter name="driverName" value="android"/>
+    <parameter name="platformName" value="ANDROID"/>
+    <classes>
+      <class name="com.ohrimenko1988.QA_homework_4.Main">
+        <methods>
+          <include name="searchCheckAndSave" invocation-numbers="0 1 2"/>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+          <include name="goToPageAndCheckIt"/>
+        </methods>
+      </class> <!-- com.ohrimenko1988.QA_homework_4.Main -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
